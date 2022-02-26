@@ -30,7 +30,12 @@ export default class GymsList extends Vue {
 <style scoped lang="scss">
 .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(7, 1fr);
+
+  @media (prefers-color-scheme: light) {
+    background-color: #ccc;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+  }
+  margin-bottom: 50px;
 }
 </style>

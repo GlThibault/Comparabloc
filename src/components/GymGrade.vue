@@ -1,6 +1,9 @@
 <template>
   <div class="gymContainer">
-    <div class="gymTitle">{{ gym.name }}</div>
+    <a :href="gym.socialNetwork?.website" target="_blank">
+      <img v-if="gym.logo" :src="gym.logo" :alt="gym.name" :title="gym.name" />
+      <div v-else class="gymTitle">{{ gym.name }}</div>
+    </a>
     <template v-for="(val, key) in gym.grades" :key="key">
       <div :style="{ backgroundColor: key, gridRow: val }"></div>
     </template>
@@ -20,14 +23,3 @@ export default class GymGrade extends Vue {
   gym!: Gym;
 }
 </script>
-
-<style scoped lang="scss">
-.gymContainer {
-  display: grid;
-  grid-template-rows: repeat(50, 1fr);
-
-  .gymTitle {
-    grid-row: 1;
-  }
-}
-</style>

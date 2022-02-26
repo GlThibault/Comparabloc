@@ -1,6 +1,8 @@
 <template>
   <div class="gymContainer">
-    <div class="gymTitle">Grades</div>
+    <a>
+      <div class="gymTitle">Cotations</div>
+    </a>
     <template v-for="grade in gradeList" :key="grade">
       <div class="gradeRow">
         {{ grade }}
@@ -47,26 +49,6 @@ export default class Grade extends Vue {
     "8c",
     "8c+",
     "9a",
-    "9a+",
-    "9b",
-    "9b+",
-    "9c",
-    "9c+",
   ];
 }
 </script>
-
-<style scoped lang="scss">
-.gymContainer {
-  display: grid;
-  grid-template-rows: repeat(50, 1fr);
-  .gymTitle {
-    grid-row: 1;
-  }
-  .gradeRow {
-    background-color: white;
-    font-weight: bold;
-    color: black;
-  }
-}
-</style>
