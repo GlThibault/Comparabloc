@@ -5992,6 +5992,11 @@ signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3:
   resolved "https://registry.npmmirror.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
 
+simpledotcss@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/simpledotcss/-/simpledotcss-2.0.5.tgz#39f33b0e5a57593f7a9359b1077448038e63e15f"
+  integrity sha512-414JbYb5KU2gKg8kWU2rG93sBiUu/uOMRvLeYuNUCvCQHz2pNzDQ2gePOWELMn6uh1z0OiL6+6QV9opFb/RnwQ==
+
 sirv@^1.0.7:
   version "1.0.19"
   resolved "https://registry.npmmirror.com/sirv/-/sirv-1.0.19.tgz#1d73979b38c7fe91fcba49c85280daa9c2363b49"
