@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkcomparabloc"]=self["webpackChunkcomparabloc"]||[]).push([[443],{4335:function(a,n,c){c.r(n),c.d(n,{default:function(){return b}});var r=c(3396);const u={class:"about"},t=(0,r._)("h1",null,"This is an about page",-1),e=[t];function o(a,n){return(0,r.wg)(),(0,r.iD)("div",u,e)}var s=c(89);const i={},l=(0,s.Z)(i,[["render",o]]);var b=l}}]);
+//# sourceMappingURL=about.b90421f0.js.map
