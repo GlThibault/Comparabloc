@@ -7,13 +7,7 @@
     <h1>Comparabloc</h1>
   </header>
   <router-view />
-  <svg
-    class="backgroundMountain"
-    id="svg"
-    width="300"
-    height="300"
-    viewbox="0 0 100 100"
-  >
+  <svg class="backgroundMountain" id="svg" viewbox="0 0 100 100">
     <filter id="blur">
       <feGaussianBlur stdDeviation="1" />
     </filter>
@@ -41,12 +35,12 @@ h1 {
 }
 
 .backgroundMountain path {
-  translate: 0 90%;
+  transform: translate(0, 90%);
   z-index: -1;
 }
 
 .parentCloud {
-  animation: clouds 60s linear infinite;
+  animation: clouds 30s linear infinite;
 }
 
 .cloud {
@@ -100,10 +94,10 @@ h1 {
 
 @keyframes clouds {
   0% {
-    translate: -10vw 0;
+    transform: translate(-110vw, 0);
   }
   100% {
-    translate: 110vw 0;
+    transform: translate(250vw, 0);
   }
 }
 </style>
