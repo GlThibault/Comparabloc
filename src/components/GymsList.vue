@@ -31,11 +31,10 @@ export default class GymsList extends Vue {
 .container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-
-  @media (prefers-color-scheme: light) {
-    background-color: #ccc;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
-  }
+  background: rgba(19, 22, 31, 0.42);
+  padding-top: 5px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
   margin-bottom: 50px;
+  border-radius: 30px;
 }
 </style>
