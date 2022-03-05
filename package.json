@@ -14,9 +14,11 @@
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.3",
+    "vue-select": "^4.0.0-beta.3",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@types/vue-select": "^3.16.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",

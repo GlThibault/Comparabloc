@@ -1,5 +1,4 @@
 document.addEventListener( "DOMContentLoaded", () => generateMountain() , false );
-window.onresize = () => generateMountain();
 
 const themes = {
   rocky: ["#7e949c", "#cad7db"],
