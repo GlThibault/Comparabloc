@@ -1,8 +1,8 @@
 <template>
-  <!-- <nav>
+  <nav>
     <router-link to="/">Accueil</router-link>
     <router-link to="/about">À propos</router-link>
-  </nav> -->
+  </nav>
   <header>
     <h1>Comparabloc</h1>
   </header>
@@ -21,8 +21,49 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1 {
+
+body {
+  width: 95vw;
+  max-width: 800px;
+  margin: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+  color: #eee;
+}
+
+h1,
+h2 {
   font-family: Lato;
+  margin-top: 0;
+}
+
+nav {
+  font-size: 1rem;
+  line-height: 2;
+  padding: 1rem 0 0 0;
+}
+
+nav a,
+nav a:visited {
+  margin: 0 1rem 1rem 0;
+  border-radius: 5px;
+  color: #eee;
+  display: inline-block;
+  padding: 0.1rem 1rem;
+  text-decoration: none;
+  background: #2c3e50;
+}
+
+nav a.router-link-active {
+  color: #ffb300;
 }
 
 .backgroundMountain {

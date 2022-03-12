@@ -25,5 +25,6 @@ const gyms = store.state.gyms;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
   margin-bottom: 50px;
   border-radius: 30px;
+  overflow: hidden;
 }
 </style>

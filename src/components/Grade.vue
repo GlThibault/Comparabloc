@@ -1,6 +1,6 @@
 <template>
   <div class="gymContainer">
-    <a>
+    <a style="grid-row: 1/4">
       <div class="gymTitle">{{ props.title }}</div>
     </a>
     <template v-for="grade in gradeList" :key="grade">
@@ -42,12 +42,6 @@ const gradeList = [
   "7b+",
   "7c",
   "7c+",
-  "8a",
-  "8a+",
-  "8b",
-  "8b+",
-  "8c",
-  "8c+",
-  "9a",
+  "> 8",
 ];
 </script>
