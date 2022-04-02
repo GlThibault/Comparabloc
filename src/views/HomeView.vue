@@ -17,12 +17,17 @@ import GymsCompare from "@/components/GymsCompare.vue";
 }
 .gymContainer {
   display: grid;
-  grid-template-rows: repeat(28, 3vh);
+  grid-template-rows: repeat(36, 3vh);
   margin-top: 25px;
 
-  .gradeRow {
+  &.smallContainer {
+    grid-template-rows: repeat(30, 3vh);
+  }
+
+  .gradeRow:not(.noMinWidth) {
     font-weight: bold;
     border-bottom: 1px solid #0003;
+    min-width: 100px;
   }
 
   .gradeRow:last-child {
@@ -44,10 +49,5 @@ import GymsCompare from "@/components/GymsCompare.vue";
       color: #ec9231;
     }
   }
-}
-
-.description {
-  font-size: 1rem !important;
-  margin-top: 0;
 }
 </style>

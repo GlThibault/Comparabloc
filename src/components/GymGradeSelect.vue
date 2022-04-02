@@ -1,7 +1,7 @@
 <template>
-  <div class="gymContainer">
+  <div class="gymContainer smallContainer">
     <div class="select">
-      <select @input="selectGym">
+      <select @input="selectGym" v-model="state.gymSelected">
         <option v-for="(g, key) in gyms" :key="g.name" :value="key">
           {{ g.name }}
         </option>
@@ -28,7 +28,14 @@ import { reactive } from "vue";
 const store = useStore();
 const gyms = store.state.gyms;
 
-const state = reactive({ currentGym: gyms[0] });
+const props = defineProps({
+  start: { type: Number, default: 0 },
+});
+
+const state = reactive({
+  currentGym: gyms[props.start],
+  gymSelected: props.start,
+});
 
 const selectGym = (event: Event) => {
   state.currentGym = gyms[event?.target?.value];

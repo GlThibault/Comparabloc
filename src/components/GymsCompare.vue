@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <GymGradeSelect />
-    <Grade title="VS" />
-    <GymGradeSelect />
+    <GymGradeSelect :start="0" />
+    <Grade grade="gradeList" />
+    <GymGradeSelect :start="1" />
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Grade />
+    <Grade grade="gradeList" />
     <template v-for="gym in gyms" :key="gym.name">
       <GymGrade :gym="gym" />
     </template>

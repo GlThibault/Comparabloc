@@ -1,6 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Accueil</router-link>
+    <router-link to="/grades">Cotations</router-link>
     <router-link to="/about">À propos</router-link>
   </nav>
   <header>
@@ -64,6 +65,11 @@ nav a:visited {
 
 nav a.router-link-active {
   color: #ffb300;
+}
+
+.description {
+  font-size: 1rem !important;
+  margin-top: 0;
 }
 
 .backgroundMountain {

@@ -1,10 +1,33 @@
 <template>
-  <div class="gymContainer">
+  <div
+    :class="[
+      'gymContainer',
+      props.grade == 'gradeList' ? 'smallContainer' : '',
+    ]"
+  >
     <a style="grid-row: 1/4">
-      <div class="gymTitle">{{ props.title }}</div>
+      <div class="gymTitle">
+        <div
+          v-if="state?.currentGrade?.image"
+          :title="state?.currentGrade?.title"
+        >
+          <img
+            :src="state.currentGrade.image"
+            :alt="state?.currentGrade?.title"
+            height="20"
+          /><br />
+          {{ state.currentGrade.subtitle }}
+        </div>
+        <div v-else>
+          {{ state?.currentGrade?.title }}
+        </div>
+      </div>
     </a>
-    <template v-for="grade in gradeList" :key="grade">
-      <div class="gradeRow">
+    <template v-for="(grade, key) in state.currentGrade" :key="grade">
+      <div
+        :class="['gradeRow', props.grade == 'gradeList' ? 'noMinWidth' : '']"
+        v-if="key >= props.min && key <= props.max"
+      >
         {{ grade }}
       </div>
     </template>
@@ -12,9 +35,21 @@
 </template>
 
 <script lang="ts" setup>
+import { useStore } from "vuex";
+import { reactive } from "vue";
+
 const props = defineProps({
-  title: { type: String, default: "Cotations" },
+  grade: { type: String, default: "Fontainebleau" },
+  min: { type: Number, default: 0 },
+  max: { type: Number, default: 36 },
 });
+
+const store = useStore();
+const grades = store.state.grades;
+
+// const selectGrade = (event: Event) => {
+//   state.currentGrade = grades[event?.target?.value];
+// };
 const gradeList = [
   "<3",
   "3",
@@ -44,4 +79,8 @@ const gradeList = [
   "7c+",
   "> 8",
 ];
+
+const state = reactive({
+  currentGrade: props.grade == "gradeList" ? gradeList : grades[props.grade],
+});
 </script>
